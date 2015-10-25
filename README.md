@@ -14,7 +14,8 @@ The project is to turn a raw data or messy data into a Tidy data that satisfies 
 In this project we use the following tools to clean the data and to achieve a tidy data that is restructured for analysis and meeting the objective of the tidy data cited above. The description of the package tools used are as follow:
 reshape allows to handle the cleaning and tidying the data that restructure the dataset to facilitate analysis
 plyr provides the tools for splitting, applying and combining data. it allows to break the data into manageable pieces 
-dplyr is the next iteration of plyr and it focuses on in depth manipulation of data frame like objects
+dplyr is the next iteration of plyr and it focuses on in depth manipulation of data frame like objects.
+The run analysis script is used to download the zip file from the web and then unzip the file to extract the files needed for the project by reading these files to the R repository.  We extract only the measurements variables that are needed for the project using the grep function and combine the file of train and test using cbind. We also apply descriptive activity names to the activities in the dataset. We load the train and test dataset and appropriately label them with descriptive variable names. We then combine those data file into one dataset file which is merged together using the cbind_rows function. We then change the colnames to eliminate the generic X2 column names. We convert the merged data into molten data frame using the melt function and dcast to reshape the data back to data frame with the subject and activity variable. Finally, we create a new text file called tidyData.txt with write.table and it is uploaded to github.
 
 References
 http://vita.had.co.nz/papers/tidy-data.pdf
